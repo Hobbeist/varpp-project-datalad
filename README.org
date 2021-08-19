@@ -24,7 +24,9 @@ In order to run the model for a project, run the following in your desired folde
 
 #+BEGIN_SRC bash :eval never 
 conda activate datalad # in case you have datalad installed on the system without conda, you do not need this step
-
+git clone https://github.com/Hobbeist/varpp-project-datalad.git
+cd varpp-project-datalad
 #+END_SRC
+
 
 

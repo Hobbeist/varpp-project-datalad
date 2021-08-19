@@ -1,0 +1,30 @@
+#+TITLE:Running VARPP-Rule: Modelling and Prediction for Pathogenic Variant Prediction in Rare Diseases 
+#+AUTHOR: Sebastian Rauschert, PhD
+#+email: Sebastian.Rauschert@telethonkids.org.au
+* Overview
+** Content
+The ~DataLad~ data set contains the follwing structure:
+
+#+BEGIN_SRC 
++---genome-data
++---pre-trained-models
++---patientVcf
++---liftover
++---scratch
++---README.org
+#+END_SRC
+** Models
+The ~DataLad~ data set can be seen as a software package, that comes with the necessary data and code pre-configured.
+It contains two docker images:
+
+1) ~gatk~ image: to run the ~picard~ ~LiftoverVcf~ tool, which allows to create 'lift' ~hg19~ annotation of a patient ~.vcf~ file to ~h38~. This is necessary, as the model data is annotated with the ~hg38~ data.
+2) ~varpp-predict-utils~ image: this docker image contains the scripts we need for running ~VARPP-RuleFit~, ~predict~ or a combination of the two for a combined project workflow.
+* Quick start: Set up the project
+In order to run the model for a project, run the following in your desired folder location on the command line:
+
+#+BEGIN_SRC bash :eval never 
+conda activate datalad # in case you have datalad installed on the system without conda, you do not need this step
+
+#+END_SRC
+
+

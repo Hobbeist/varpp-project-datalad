@@ -3,3 +3,6 @@
 [datalad "containers.varpp"]
 	image = .datalad/environments/varpp/image
 	cmdexec = singularity exec {img} {cmd}
+[datalad "containers.gatk"]
+	image = .datalad/environments/gatk/image
+	cmdexec = singularity exec {img} {cmd}

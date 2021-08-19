@@ -1,2 +1,5 @@
 [datalad "dataset"]
 	id = df705b45-6292-4cee-9946-394d9106f6ee
+[datalad "containers.varpp"]
+	image = .datalad/environments/varpp/image
+	cmdexec = singularity exec {img} {cmd}
